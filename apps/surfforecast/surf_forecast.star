@@ -524,6 +524,13 @@ def get_schema():
                 icon = "magnifyingGlass",
                 handler = search_handler,
             ),
+            schema.Text(
+                id = "display_name",
+                name = "Display Name",
+                icon = "pencil",
+                desc = "Optional spot name to display",
+                default = "",
+            ),
             schema.Dropdown(
                 id = "min_height",
                 name = "Mininum Size",
@@ -531,13 +538,6 @@ def get_schema():
                 desc = "The minimum wave size to display",
                 options = min_height_options,
                 default = "0"
-            ),
-            schema.Text(
-                id = "display_name",
-                name = "Display Name",
-                icon = "pencil",
-                desc = "Optional spot name to display",
-                default = "",
             ),
         ],
     )
