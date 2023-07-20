@@ -46,15 +46,15 @@ DEFAULT_SPOT_ID = "5842041f4e65fad6a7708841"
 
 def main(config):
     if config.get("spot"):
-        spot = json.decode(config.get("spot"))
-        spot_name = spot["display"]
-        spot_id = spot["value"]
+        # spot = json.decode(config.get("spot"))
+        # spot_name = spot["display"]
+        spot_id = config.get("spot")
     else:
         spot_name = DEFAULT_SPOT_NAME
         spot_id = DEFAULT_SPOT_ID
 
-    if config.get("spot_name"):
-        spot_name = config.get("spot_name")
+    
+    spot_name = config.get("spot_name", 'default')
 
     use_wave_height = (config.get("use_wave_height") == "true")
 
@@ -327,12 +327,11 @@ def get_schema():
     return schema.Schema(
         version = "1",
         fields = [
-            schema.Typeahead(
+                schema.Text(
                 id = "spot",
-                name = "Spot Name",
-                desc = "Spot Name in Surfline",
-                icon = "compass",
-                handler = search_handler,
+                name = "Surfline spot id",
+                desc = "Find spot on Surfline",
+                icon = "pencil",
             ),
             schema.Text(
                 id = "spot_name",
