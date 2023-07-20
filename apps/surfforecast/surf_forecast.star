@@ -21,14 +21,14 @@ SURFLINE_WIND_URL = "https://services.surfline.com/kbyg/spots/forecasts/wind?spo
 SURFLINE_QUERY_URL = "https://services.surfline.com/onboarding/spots?query={query}&limit=5&offset=0&camsOnly=false"
 
 COLOR_BY_SURFLINE_RATING = {
-    "FLAT": "#A2ACB9",
-    "VERY_POOR": "#A2ACB9",
-    "POOR": "#429CFF",
-    "POOR_TO_FAIR": "#2FD2E8",
-    "FAIR": "#18D64C",
-    "FAIR_TO_GOOD": "#FFD100",
-    "GOOD": "#FF8F00",
-    "EPIC": "#DD452D",
+    "FLAT": "#A2ACB9", #gray
+    "VERY_POOR": "#A2ACB9", #gray
+    "POOR": "#429CFF", #blue
+    "POOR_TO_FAIR": "#2FD2E8", #teal
+    "FAIR": "#18D64C", #green
+    "FAIR_TO_GOOD": "#FFD100", #yellow
+    "GOOD": "#FF8F00", #orange
+    "EPIC": "#DD452D", #red
 }
 
 COLORS = {
@@ -95,7 +95,7 @@ def get_spot_id_from_config(config):
     return spot
 
 def get_display_name_from_config(config):
-    display_name = config.str("display_name") or 'default'
+    display_name = config.str("display_name") or 'default'  
     # if display_name:
     #     return display_name
 
