@@ -211,7 +211,7 @@ word_array = [
     ["chasilat", "to set a trap"],
     ["chathi", "sheath"],
     ["chay", "cinnamon"],
-    ["check", "well"],
+    ["chek", "well"],
     ["chelsian", "locust"],
     ["chemve", "shore, beach"],
     ["chemveser", "shoreline"],
